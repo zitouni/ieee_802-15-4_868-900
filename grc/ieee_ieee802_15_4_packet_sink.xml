@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Message Sink (the source port is a message)
+###################################################
+ -->
+<block>
+	<name>IEEE sink packet 868-915</name>
+	<key>ieee_ieee802_15_4_packet_sink</key>
+	<category>IEEE 802.15.4_868-915</category>
+	<import>import ieee</import>
+	<make>ieee.ieee802_15_4_packet_sink($(id)rcvd_pktq, $threshold)</make>
+	<param>
+		<name>Input Type</name>
+		<key>type</key>
+		<type>enum</type>
+		<option>
+			<name>Complex</name>
+			<key>complex</key>
+			<opt>size:gr.sizeof_gr_complex</opt>
+		</option>
+		<option>
+			<name>Float</name>
+			<key>float</key>
+			<opt>size:gr.sizeof_float</opt>
+		</option>
+		<option>
+			<name>Int</name>
+			<key>int</key>
+			<opt>size:gr.sizeof_int</opt>
+		</option>
+		<option>
+			<name>Short</name>
+			<key>short</key>
+			<opt>size:gr.sizeof_short</opt>
+		</option>
+		<option>
+			<name>Byte</name>
+			<key>byte</key>
+			<opt>size:gr.sizeof_char</opt>
+		</option>
+	</param>	
+	<param>
+		<name>Threshold for errors</name>
+		<key>threshold</key>
+		<value>-1</value>
+		<type>int</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>$type</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>msg</type>
+	</source>
+</block>
