@@ -138,6 +138,7 @@ am__uninstall_files_from_dir = { \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
 am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
+#am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
 am__installdirs = "$(DESTDIR)$(modpythondir)"
 py_compile = $(top_srcdir)/py-compile
 am__tty_colors = \
@@ -182,7 +183,7 @@ EGREP = /bin/grep -E
 EXEEXT = 
 FGREP = /bin/grep -F
 GIT = /usr/bin/git
-GIT_COMMIT = 
+GIT_COMMIT = daf13956
 GIT_DESCRIBE = 
 GIT_SEQNO = 
 GIT_TAG = 
@@ -411,6 +412,7 @@ mostlyclean-libtool:
 clean-libtool:
 	-rm -rf .libs _libs
 install-modpythonPYTHON: $(modpython_PYTHON)
+
 	@$(NORMAL_INSTALL)
 	test -z "$(modpythondir)" || $(MKDIR_P) "$(DESTDIR)$(modpythondir)"
 	@list='$(modpython_PYTHON)'; dlist=; list2=; test -n "$(modpythondir)" || list=; \

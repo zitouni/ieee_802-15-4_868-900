@@ -51,7 +51,9 @@ configure:2601: checking for git
 configure:2619: found /usr/bin/git
 configure:2631: result: /usr/bin/git
 configure:2641: checking existence of git version control directory
-configure:2674: result: not found
+configure:2644: result: ok
+configure:2646: checking git description of current commit
+configure:2667: result: no tag in history, using current commit
 configure:2705: GNU Radio Release 3.3.0
 configure:2728: checking for a BSD-compatible install
 configure:2796: result: /usr/bin/install -c
@@ -1874,7 +1876,7 @@ EGREP='/bin/grep -E'
 EXEEXT=''
 FGREP='/bin/grep -F'
 GIT='/usr/bin/git'
-GIT_COMMIT=''
+GIT_COMMIT='daf13956'
 GIT_DESCRIBE=''
 GIT_SEQNO=''
 GIT_TAG=''

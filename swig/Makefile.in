@@ -186,6 +186,7 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
+#am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
 am__installdirs = "$(DESTDIR)$(howto_pylibdir)" \
 	"$(DESTDIR)$(howto_pythondir)" \
 	"$(DESTDIR)$(howto_swigincludedir)"
@@ -635,6 +636,7 @@ mostlyclean-libtool:
 clean-libtool:
 	-rm -rf .libs _libs
 install-howto_pythonPYTHON: $(howto_python_PYTHON)
+
 	@$(NORMAL_INSTALL)
 	test -z "$(howto_pythondir)" || $(MKDIR_P) "$(DESTDIR)$(howto_pythondir)"
 	@list='$(howto_python_PYTHON)'; dlist=; list2=; test -n "$(howto_pythondir)" || list=; \
