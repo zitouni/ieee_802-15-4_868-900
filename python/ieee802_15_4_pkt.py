@@ -23,11 +23,11 @@
 #
 # Modified by: Thomas Schmid, Leslie Choong, Sanna Leidelof
 #
-############
-#########
-import Numeric
 
-from gnuradio import gr, packet_utils, gru
+#import Numeric
+import numpy
+
+from gnuradio import gr, digital, gru
 from gnuradio import ucla
 import crc16
 import gnuradio.gr.gr_threading as _threading
@@ -77,10 +77,14 @@ def make_ieee802_15_4_packet(FCF, seqNr, addressInfo, payload, pad_for_usrp=True
     FCS = struct.pack("H", crc.intchecksum())
 
     pkt = ''.join((SHR, PHR, MPDU, FCS))
+    
+    print "********packet size : ", len(pkt) 
 
     if pad_for_usrp:
         # note that we have 16 samples which go over the USB for each bit
         pkt = pkt + (_npadding_bytes(len(pkt), 8) * '\x00')+0*'\x00'
+        
+    #print "********packet size with pad : ", len(pkt) 
 
     return pkt
 
@@ -167,8 +171,13 @@ class ieee802_15_4_mod_pkts(gr.hier_block2):
 
         # accepts messages from the outside world
         self.pkt_input = gr.message_source(gr.sizeof_char, self.msgq_limit)
+        
+        #generate a vector source of 1
+        #self.stream_input = gr.vector_source_b([1,],True)
+        
         self.ieee802_15_4_mod = ieee802_15_4.ieee802_15_4_mod(self, *args, **kwargs)
         self.connect(self.pkt_input, self.ieee802_15_4_mod, self) 
+        #self.connect(self.stream_input, self.ieee802_15_4_mod, self)
 
     def send_pkt(self, seqNr, addressInfo, payload='', eof=False):
         """

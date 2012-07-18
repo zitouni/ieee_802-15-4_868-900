@@ -1,11 +1,11 @@
 #
-# Copyright 2004,2010 Free Software Foundation, Inc.
+# Copyright 2004 Free Software Foundation, Inc.
 # 
 # This file is part of GNU Radio
 # 
 # GNU Radio is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 3, or (at your option)
+# the Free Software Foundation; either version 2, or (at your option)
 # any later version.
 # 
 # GNU Radio is distributed in the hope that it will be useful,
@@ -15,17 +15,30 @@
 # 
 # You should have received a copy of the GNU General Public License
 # along with GNU Radio; see the file COPYING.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street,
-# Boston, MA 02110-1301, USA.
+# the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+# Boston, MA 02111-1307, USA.
 # 
 
 include $(top_srcdir)/Makefile.common
 
 EXTRA_DIST = run_tests.in
-TESTS = run_tests
 
-modpython_PYTHON = \
-	__init__.py
 
-noinst_PYTHON = \
-	qa_howto.py			
+TESTS = 				\
+	run_tests
+
+uclapythondir = $(grpythondir)/ucla_blks
+
+uclapython_PYTHON =                     \
+	__init__.py                     \
+	cc1k.py                         \
+	cc1k_sos_pkt.py                 \
+	ieee802_15_4.py			\
+	ieee802_15_4_pkt.py             \
+	crc16.py                        \
+	crc8.py
+
+noinst_PYTHON = 			\
+	qa_ucla.py			
+
+CLEANFILES = *.pyc *.pyo
