@@ -27,6 +27,8 @@ uname -v = #36-Ubuntu SMP Tue Apr 10 20:39:51 UTC 2012
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /opt/Xilinx/12.1/ISE_DS/EDK/gnu/microblaze/lin64/bin
+PATH: /opt/Xilinx/12.1/ISE_DS/ISE/bin/lin64
 PATH: /usr/lib/lightdm/lightdm
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
@@ -35,6 +37,7 @@ PATH: /usr/bin
 PATH: /sbin
 PATH: /bin
 PATH: /usr/games
+PATH: /usr/local/bin
 
 
 ## ----------- ##
@@ -1876,7 +1879,7 @@ EGREP='/bin/grep -E'
 EXEEXT=''
 FGREP='/bin/grep -F'
 GIT='/usr/bin/git'
-GIT_COMMIT='daf13956'
+GIT_COMMIT='19a18cbe'
 GIT_DESCRIBE=''
 GIT_SEQNO=''
 GIT_TAG=''
