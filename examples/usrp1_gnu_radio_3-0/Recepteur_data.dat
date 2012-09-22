@@ -1,0 +1,3 @@
+Center frequency: 915M
+USRP source: <gr_block usrp_source_c (2)>
+Decimation: 32
