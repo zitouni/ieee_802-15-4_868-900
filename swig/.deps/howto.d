@@ -64,6 +64,11 @@ howto_swig.cc: \
   /usr/local/include/gnuradio/swig/gr_io_signature.i \
   /usr/local/include/gnuradio/swig/gr_buffer.i \
   /usr/local/include/gnuradio/swig/gr_basic_block.i \
+  /usr/local/include/gnuradio/swig/pmt_swig.i \
+  /usr/share/swig2.0/stdint.i \
+  /usr/share/swig2.0/swigarch.i \
+  /usr/local/include/gnuradio/swig/pmt_swig_doc.i \
+  /usr/local/include/gnuradio/swig/gr_intrusive_ptr.i \
   /usr/local/include/gnuradio/swig/gr_block.i \
   /usr/local/include/gnuradio/swig/gr_block_detail.i \
   /usr/local/include/gnuradio/swig/gr_hier_block2.i \

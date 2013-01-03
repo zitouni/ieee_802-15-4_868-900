@@ -102,7 +102,7 @@
 # Boston, MA 02110-1301, USA.
 # 
 
-# Makefile.swig.gen for howto.i
+# Makefile.swig.gen for ieee.i
 
 
 
@@ -125,11 +125,11 @@ POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
 target_triplet = x86_64-unknown-linux-gnu
-DIST_COMMON = $(am__howto_python_PYTHON_DIST) \
-	$(am__howto_swiginclude_HEADERS_DIST) $(srcdir)/Makefile.am \
+DIST_COMMON = $(am__ieee_python_PYTHON_DIST) \
+	$(am__ieee_swiginclude_HEADERS_DIST) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.swig.gen \
 	$(top_srcdir)/Makefile.common $(top_srcdir)/Makefile.swig
-am__append_1 = $(DEPDIR)/howto-generate-*
+am__append_1 = $(DEPDIR)/ieee-generate-*
 am__append_2 = $(DEPDIR)/*.S*
 subdir = swig
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -187,21 +187,20 @@ am__uninstall_files_from_dir = { \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
 #am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
-am__installdirs = "$(DESTDIR)$(howto_pylibdir)" \
-	"$(DESTDIR)$(howto_pythondir)" \
-	"$(DESTDIR)$(howto_swigincludedir)"
-LTLIBRARIES = $(howto_pylib_LTLIBRARIES)
+am__installdirs = "$(DESTDIR)$(ieee_pylibdir)" \
+	"$(DESTDIR)$(ieee_pythondir)" \
+	"$(DESTDIR)$(ieee_swigincludedir)"
+LTLIBRARIES = $(ieee_pylib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-_howto_swig_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-	$(howto_la_swig_libadd)
-am___howto_swig_la_SOURCES_DIST = howto_swig.cc
-am__howto_swig_la_OBJECTS = _howto_swig_la-howto_swig.lo
-_howto_swig_la_OBJECTS = $(am__howto_swig_la_OBJECTS)
-_howto_swig_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(_howto_swig_la_CXXFLAGS) $(CXXFLAGS) \
-	$(_howto_swig_la_LDFLAGS) $(LDFLAGS) -o $@
-am__howto_swig_la_rpath = -rpath $(howto_pylibdir)
+_ieee_swig_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(ieee_la_swig_libadd)
+am___ieee_swig_la_SOURCES_DIST = ieee_swig.cc
+am__ieee_swig_la_OBJECTS = _ieee_swig_la-ieee_swig.lo
+_ieee_swig_la_OBJECTS = $(am__ieee_swig_la_OBJECTS)
+_ieee_swig_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(_ieee_swig_la_CXXFLAGS) \
+	$(CXXFLAGS) $(_ieee_swig_la_LDFLAGS) $(LDFLAGS) -o $@
+am__ieee_swig_la_rpath = -rpath $(ieee_pylibdir)
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -215,24 +214,24 @@ CXXLD = $(CXX)
 CXXLINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(_howto_swig_la_SOURCES)
-DIST_SOURCES = $(am___howto_swig_la_SOURCES_DIST)
-am__howto_python_PYTHON_DIST = howto_swig.py
+SOURCES = $(_ieee_swig_la_SOURCES)
+DIST_SOURCES = $(am___ieee_swig_la_SOURCES_DIST)
+am__ieee_python_PYTHON_DIST = ieee_swig.py
 am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
 py_compile = $(top_srcdir)/py-compile
-am__howto_swiginclude_HEADERS_DIST = ieee.i ieee_symbols_to_chips_bs.i \
-	ieee_ieee802_15_4_packet_sink.i howto_square2_ff.i
-HEADERS = $(howto_swiginclude_HEADERS)
+am__ieee_swiginclude_HEADERS_DIST = ieee.i ieee_symbols_to_chips_bs.i \
+	ieee_ieee802_15_4_packet_sink.i
+HEADERS = $(ieee_swiginclude_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCAS = gcc
@@ -265,7 +264,7 @@ EGREP = /bin/grep -E
 EXEEXT = 
 FGREP = /bin/grep -F
 GIT = /usr/bin/git
-GIT_COMMIT = 19a18cbe
+GIT_COMMIT = c497cc94
 GIT_DESCRIBE = 
 GIT_SEQNO = 
 GIT_TAG = 
@@ -288,7 +287,7 @@ LIBVER = 3.3.0
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -327,10 +326,10 @@ SWIG_PYTHON_LIB = -lswigpy
 SWIG_PYTHON_OPT = -python
 VERSION = 3.3.0
 XMLTO = 
-abs_builddir = /home/zitouni/git/workspace/ieee_802-15-4_868-900/swig
-abs_srcdir = /home/zitouni/git/workspace/ieee_802-15-4_868-900/swig
-abs_top_builddir = /home/zitouni/git/workspace/ieee_802-15-4_868-900
-abs_top_srcdir = /home/zitouni/git/workspace/ieee_802-15-4_868-900
+abs_builddir = /home/zitouni/git/ieee_802-15-4_868-900/swig
+abs_srcdir = /home/zitouni/git/ieee_802-15-4_868-900/swig
+abs_top_builddir = /home/zitouni/git/ieee_802-15-4_868-900
+abs_top_srcdir = /home/zitouni/git/ieee_802-15-4_868-900
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -362,7 +361,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/install-sh
+install_sh = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/install-sh
 lf_CFLAGS =  -Wall -Werror-implicit-function-declaration
 lf_CXXFLAGS =  -Wall -Woverloaded-virtual
 libdir = ${exec_prefix}/lib64
@@ -421,7 +420,7 @@ STD_DEFINES_AND_INCLUDES = \
 modincludedir = $(includedir)/$(modname)
 
 # swig includes 
-swigincludedir = $(modincludedir)/swig
+swigincludedir = $(modincludedir)/swig -I/$(includedir)/gruel/swig
 
 # Install this stuff in the appropriate subdirectory
 # This usually ends up at:
@@ -452,8 +451,8 @@ TOP_SWIG_IFILES = \
 #   import howto
 # This ends up at:
 #   ${prefix}/lib/python${python_version}/site-packages/$(modname)
-howto_la_swig_libadd = \
-	$(top_builddir)/lib/libgnuradio-howto.la
+ieee_la_swig_libadd = \
+	$(top_builddir)/lib/libgnuradio-ieee.la
 
 SWIG_PYTHON_FLAGS = \
 	-fvirtual	\
@@ -480,36 +479,36 @@ STD_SWIG_LA_LIB_ADD = \
 
 STD_SWIG_CXX_FLAGS = -g -O1 -Wno-strict-aliasing -Wno-parentheses
 SUFFIXES = .i
-swig_built_sources = howto_swig.py howto_swig.cc
-howto_pythondir = $(pythondir)/ieee
-howto_pylibdir = $(pyexecdir)/ieee
-howto_swigincludedir = $(swigincludedir)
-howto_swiginclude_HEADERS = \
+swig_built_sources = ieee_swig.py ieee_swig.cc
+ieee_pythondir = $(pythondir)/ieee
+ieee_pylibdir = $(pyexecdir)/ieee
+ieee_swigincludedir = $(swigincludedir)
+ieee_swiginclude_HEADERS = \
 	ieee.i			\
-	$(howto_swiginclude_headers)
+	$(ieee_swiginclude_headers)
 
-howto_pylib_LTLIBRARIES = \
-	_howto_swig.la
+ieee_pylib_LTLIBRARIES = \
+	_ieee_swig.la
 
-_howto_swig_la_SOURCES = \
-	howto_swig.cc			\
-	$(howto_la_swig_sources)
+_ieee_swig_la_SOURCES = \
+	ieee_swig.cc			\
+	$(ieee_la_swig_sources)
 
-_howto_swig_la_LIBADD = \
+_ieee_swig_la_LIBADD = \
 	$(STD_SWIG_LA_LIB_ADD)		\
-	$(howto_la_swig_libadd)
+	$(ieee_la_swig_libadd)
 
-_howto_swig_la_LDFLAGS = \
+_ieee_swig_la_LDFLAGS = \
 	$(STD_SWIG_LA_LD_FLAGS)		\
-	$(howto_la_swig_ldflags)
+	$(ieee_la_swig_ldflags)
 
-_howto_swig_la_CXXFLAGS = \
+_ieee_swig_la_CXXFLAGS = \
 	$(STD_SWIG_CXX_FLAGS)		\
-	$(howto_la_swig_cxxflags)
+	$(ieee_la_swig_cxxflags)
 
-howto_python_PYTHON = \
-	howto_swig.py			\
-	$(howto_python)
+ieee_python_PYTHON = \
+	ieee_swig.py			\
+	$(ieee_python)
 
 
 # add some of the variables generated inside the Makefile.swig.gen
@@ -519,10 +518,9 @@ BUILT_SOURCES = $(swig_built_sources)
 no_dist_files = $(swig_built_sources)
 
 # additional SWIG files to be installed
-howto_swiginclude_headers = \
+ieee_swiginclude_headers = \
 	ieee_symbols_to_chips_bs.i \
-	ieee_ieee802_15_4_packet_sink.i \
-	howto_square2_ff.i
+	ieee_ieee802_15_4_packet_sink.i 
 
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -560,39 +558,39 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
-install-howto_pylibLTLIBRARIES: $(howto_pylib_LTLIBRARIES)
+install-ieee_pylibLTLIBRARIES: $(ieee_pylib_LTLIBRARIES)
 	@$(NORMAL_INSTALL)
-	test -z "$(howto_pylibdir)" || $(MKDIR_P) "$(DESTDIR)$(howto_pylibdir)"
-	@list='$(howto_pylib_LTLIBRARIES)'; test -n "$(howto_pylibdir)" || list=; \
+	test -z "$(ieee_pylibdir)" || $(MKDIR_P) "$(DESTDIR)$(ieee_pylibdir)"
+	@list='$(ieee_pylib_LTLIBRARIES)'; test -n "$(ieee_pylibdir)" || list=; \
 	list2=; for p in $$list; do \
 	  if test -f $$p; then \
 	    list2="$$list2 $$p"; \
 	  else :; fi; \
 	done; \
 	test -z "$$list2" || { \
-	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 '$(DESTDIR)$(howto_pylibdir)'"; \
-	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 "$(DESTDIR)$(howto_pylibdir)"; \
+	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 '$(DESTDIR)$(ieee_pylibdir)'"; \
+	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 "$(DESTDIR)$(ieee_pylibdir)"; \
 	}
 
-uninstall-howto_pylibLTLIBRARIES:
+uninstall-ieee_pylibLTLIBRARIES:
 	@$(NORMAL_UNINSTALL)
-	@list='$(howto_pylib_LTLIBRARIES)'; test -n "$(howto_pylibdir)" || list=; \
+	@list='$(ieee_pylib_LTLIBRARIES)'; test -n "$(ieee_pylibdir)" || list=; \
 	for p in $$list; do \
 	  $(am__strip_dir) \
-	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(howto_pylibdir)/$$f'"; \
-	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(howto_pylibdir)/$$f"; \
+	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(ieee_pylibdir)/$$f'"; \
+	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(ieee_pylibdir)/$$f"; \
 	done
 
-clean-howto_pylibLTLIBRARIES:
-	-test -z "$(howto_pylib_LTLIBRARIES)" || rm -f $(howto_pylib_LTLIBRARIES)
-	@list='$(howto_pylib_LTLIBRARIES)'; for p in $$list; do \
+clean-ieee_pylibLTLIBRARIES:
+	-test -z "$(ieee_pylib_LTLIBRARIES)" || rm -f $(ieee_pylib_LTLIBRARIES)
+	@list='$(ieee_pylib_LTLIBRARIES)'; for p in $$list; do \
 	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
 	  test "$$dir" != "$$p" || dir=.; \
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-_howto_swig.la: $(_howto_swig_la_OBJECTS) $(_howto_swig_la_DEPENDENCIES) $(EXTRA__howto_swig_la_DEPENDENCIES) 
-	$(_howto_swig_la_LINK) $(am__howto_swig_la_rpath) $(_howto_swig_la_OBJECTS) $(_howto_swig_la_LIBADD) $(LIBS)
+_ieee_swig.la: $(_ieee_swig_la_OBJECTS) $(_ieee_swig_la_DEPENDENCIES) $(EXTRA__ieee_swig_la_DEPENDENCIES) 
+	$(_ieee_swig_la_LINK) $(am__ieee_swig_la_rpath) $(_ieee_swig_la_OBJECTS) $(_ieee_swig_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -600,7 +598,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/_howto_swig_la-howto_swig.Plo
+include ./$(DEPDIR)/_ieee_swig_la-ieee_swig.Plo
 
 .cc.o:
 	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -623,23 +621,22 @@ include ./$(DEPDIR)/_howto_swig_la-howto_swig.Plo
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(LTCXXCOMPILE) -c -o $@ $<
 
-_howto_swig_la-howto_swig.lo: howto_swig.cc
-	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(_howto_swig_la_CXXFLAGS) $(CXXFLAGS) -MT _howto_swig_la-howto_swig.lo -MD -MP -MF $(DEPDIR)/_howto_swig_la-howto_swig.Tpo -c -o _howto_swig_la-howto_swig.lo `test -f 'howto_swig.cc' || echo '$(srcdir)/'`howto_swig.cc
-	$(am__mv) $(DEPDIR)/_howto_swig_la-howto_swig.Tpo $(DEPDIR)/_howto_swig_la-howto_swig.Plo
-#	source='howto_swig.cc' object='_howto_swig_la-howto_swig.lo' libtool=yes \
+_ieee_swig_la-ieee_swig.lo: ieee_swig.cc
+	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(_ieee_swig_la_CXXFLAGS) $(CXXFLAGS) -MT _ieee_swig_la-ieee_swig.lo -MD -MP -MF $(DEPDIR)/_ieee_swig_la-ieee_swig.Tpo -c -o _ieee_swig_la-ieee_swig.lo `test -f 'ieee_swig.cc' || echo '$(srcdir)/'`ieee_swig.cc
+	$(am__mv) $(DEPDIR)/_ieee_swig_la-ieee_swig.Tpo $(DEPDIR)/_ieee_swig_la-ieee_swig.Plo
+#	source='ieee_swig.cc' object='_ieee_swig_la-ieee_swig.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(_howto_swig_la_CXXFLAGS) $(CXXFLAGS) -c -o _howto_swig_la-howto_swig.lo `test -f 'howto_swig.cc' || echo '$(srcdir)/'`howto_swig.cc
+#	$(LIBTOOL)  --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(_ieee_swig_la_CXXFLAGS) $(CXXFLAGS) -c -o _ieee_swig_la-ieee_swig.lo `test -f 'ieee_swig.cc' || echo '$(srcdir)/'`ieee_swig.cc
 
 mostlyclean-libtool:
 	-rm -f *.lo
 
 clean-libtool:
 	-rm -rf .libs _libs
-install-howto_pythonPYTHON: $(howto_python_PYTHON)
-
+install-ieee_pythonPYTHON: $(ieee_python_PYTHON)
 	@$(NORMAL_INSTALL)
-	test -z "$(howto_pythondir)" || $(MKDIR_P) "$(DESTDIR)$(howto_pythondir)"
-	@list='$(howto_python_PYTHON)'; dlist=; list2=; test -n "$(howto_pythondir)" || list=; \
+	test -z "$(ieee_pythondir)" || $(MKDIR_P) "$(DESTDIR)$(ieee_pythondir)"
+	@list='$(ieee_python_PYTHON)'; dlist=; list2=; test -n "$(ieee_pythondir)" || list=; \
 	for p in $$list; do \
 	  if test -f "$$p"; then b=; else b="$(srcdir)/"; fi; \
 	  if test -f $$b$$p; then \
@@ -650,20 +647,20 @@ install-howto_pythonPYTHON: $(howto_python_PYTHON)
 	done; \
 	for file in $$list2; do echo $$file; done | $(am__base_list) | \
 	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(howto_pythondir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(howto_pythondir)" || exit $$?; \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(ieee_pythondir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(ieee_pythondir)" || exit $$?; \
 	done || exit $$?; \
 	if test -n "$$dlist"; then \
 	  $(am__py_compile) --destdir "$(DESTDIR)" \
-	                    --basedir "$(howto_pythondir)" $$dlist; \
+	                    --basedir "$(ieee_pythondir)" $$dlist; \
 	else :; fi
 
-uninstall-howto_pythonPYTHON:
+uninstall-ieee_pythonPYTHON:
 	@$(NORMAL_UNINSTALL)
-	@list='$(howto_python_PYTHON)'; test -n "$(howto_pythondir)" || list=; \
+	@list='$(ieee_python_PYTHON)'; test -n "$(ieee_pythondir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	test -n "$$files" || exit 0; \
-	dir='$(DESTDIR)$(howto_pythondir)'; \
+	dir='$(DESTDIR)$(ieee_pythondir)'; \
 	filesc=`echo "$$files" | sed 's|$$|c|'`; \
 	fileso=`echo "$$files" | sed 's|$$|o|'`; \
 	st=0; \
@@ -671,24 +668,24 @@ uninstall-howto_pythonPYTHON:
 	  $(am__uninstall_files_from_dir) || st=$$?; \
 	done; \
 	exit $$st
-install-howto_swigincludeHEADERS: $(howto_swiginclude_HEADERS)
+install-ieee_swigincludeHEADERS: $(ieee_swiginclude_HEADERS)
 	@$(NORMAL_INSTALL)
-	test -z "$(howto_swigincludedir)" || $(MKDIR_P) "$(DESTDIR)$(howto_swigincludedir)"
-	@list='$(howto_swiginclude_HEADERS)'; test -n "$(howto_swigincludedir)" || list=; \
+	test -z "$(ieee_swigincludedir)" || $(MKDIR_P) "$(DESTDIR)$(ieee_swigincludedir)"
+	@list='$(ieee_swiginclude_HEADERS)'; test -n "$(ieee_swigincludedir)" || list=; \
 	for p in $$list; do \
 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 	  echo "$$d$$p"; \
 	done | $(am__base_list) | \
 	while read files; do \
-	  echo " $(INSTALL_HEADER) $$files '$(DESTDIR)$(howto_swigincludedir)'"; \
-	  $(INSTALL_HEADER) $$files "$(DESTDIR)$(howto_swigincludedir)" || exit $$?; \
+	  echo " $(INSTALL_HEADER) $$files '$(DESTDIR)$(ieee_swigincludedir)'"; \
+	  $(INSTALL_HEADER) $$files "$(DESTDIR)$(ieee_swigincludedir)" || exit $$?; \
 	done
 
-uninstall-howto_swigincludeHEADERS:
+uninstall-ieee_swigincludeHEADERS:
 	@$(NORMAL_UNINSTALL)
-	@list='$(howto_swiginclude_HEADERS)'; test -n "$(howto_swigincludedir)" || list=; \
+	@list='$(ieee_swiginclude_HEADERS)'; test -n "$(ieee_swigincludedir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(howto_swigincludedir)'; $(am__uninstall_files_from_dir)
+	dir='$(DESTDIR)$(ieee_swigincludedir)'; $(am__uninstall_files_from_dir)
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
@@ -780,7 +777,7 @@ check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(LTLIBRARIES) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(howto_pylibdir)" "$(DESTDIR)$(howto_pythondir)" "$(DESTDIR)$(howto_swigincludedir)"; do \
+	for dir in "$(DESTDIR)$(ieee_pylibdir)" "$(DESTDIR)$(ieee_pythondir)" "$(DESTDIR)$(ieee_swigincludedir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -818,7 +815,7 @@ maintainer-clean-generic:
 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 clean: clean-am
 
-clean-am: clean-generic clean-howto_pylibLTLIBRARIES clean-libtool \
+clean-am: clean-generic clean-ieee_pylibLTLIBRARIES clean-libtool \
 	mostlyclean-am
 
 distclean: distclean-am
@@ -839,8 +836,8 @@ info: info-am
 
 info-am:
 
-install-data-am: install-howto_pylibLTLIBRARIES \
-	install-howto_pythonPYTHON install-howto_swigincludeHEADERS
+install-data-am: install-ieee_pylibLTLIBRARIES \
+	install-ieee_pythonPYTHON install-ieee_swigincludeHEADERS
 
 install-dvi: install-dvi-am
 
@@ -886,29 +883,27 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-howto_pylibLTLIBRARIES \
-	uninstall-howto_pythonPYTHON \
-	uninstall-howto_swigincludeHEADERS
+uninstall-am: uninstall-ieee_pylibLTLIBRARIES \
+	uninstall-ieee_pythonPYTHON uninstall-ieee_swigincludeHEADERS
 
 .MAKE: all check install install-am install-strip
 
 .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
-	clean-howto_pylibLTLIBRARIES clean-libtool ctags dist-hook \
+	clean-ieee_pylibLTLIBRARIES clean-libtool ctags dist-hook \
 	distclean distclean-compile distclean-generic \
 	distclean-libtool distclean-tags distdir dvi dvi-am html \
 	html-am info info-am install install-am install-data \
 	install-data-am install-dvi install-dvi-am install-exec \
-	install-exec-am install-howto_pylibLTLIBRARIES \
-	install-howto_pythonPYTHON install-howto_swigincludeHEADERS \
-	install-html install-html-am install-info install-info-am \
+	install-exec-am install-html install-html-am \
+	install-ieee_pylibLTLIBRARIES install-ieee_pythonPYTHON \
+	install-ieee_swigincludeHEADERS install-info install-info-am \
 	install-man install-pdf install-pdf-am install-ps \
 	install-ps-am install-strip installcheck installcheck-am \
 	installdirs maintainer-clean maintainer-clean-generic \
 	mostlyclean mostlyclean-compile mostlyclean-generic \
 	mostlyclean-libtool pdf pdf-am ps ps-am tags uninstall \
-	uninstall-am uninstall-howto_pylibLTLIBRARIES \
-	uninstall-howto_pythonPYTHON \
-	uninstall-howto_swigincludeHEADERS
+	uninstall-am uninstall-ieee_pylibLTLIBRARIES \
+	uninstall-ieee_pythonPYTHON uninstall-ieee_swigincludeHEADERS
 
 
 # Don't distribute the files defined in the variable 'no_dist_files'
@@ -943,37 +938,37 @@ generate-makefile-swig $(srcdir)/Makefile.swig.gen: $(top_srcdir)/Makefile.swig.
 		exit -1; \
 	fi;
 
-ieee.h howto_swig.py howto_swig.cc: ieee.i
-	trap 'rm -rf $(DEPDIR)/howto-generate-*' 1 2 13 15; \
-	if mkdir $(DEPDIR)/howto-generate-lock 2>/dev/null; then \
-		rm -f $(DEPDIR)/howto-generate-stamp; \
-		$(MAKE) $(AM_MAKEFLAGS) $(DEPDIR)/howto-generate-stamp WHAT=$<; \
-		rmdir $(DEPDIR)/howto-generate-lock; \
+ieee.h ieee_swig.py ieee_swig.cc: ieee.i
+	trap 'rm -rf $(DEPDIR)/ieee-generate-*' 1 2 13 15; \
+	if mkdir $(DEPDIR)/ieee-generate-lock 2>/dev/null; then \
+		rm -f $(DEPDIR)/ieee-generate-stamp; \
+		$(MAKE) $(AM_MAKEFLAGS) $(DEPDIR)/ieee-generate-stamp WHAT=$<; \
+		rmdir $(DEPDIR)/ieee-generate-lock; \
 	else \
-		while test -d $(DEPDIR)/howto-generate-lock; do \
+		while test -d $(DEPDIR)/ieee-generate-lock; do \
 			sleep 1; \
 		done; \
-		test -f $(DEPDIR)/howto-generate-stamp; \
+		test -f $(DEPDIR)/ieee-generate-stamp; \
 		exit $$?; \
 	fi;
 
-$(DEPDIR)/howto-generate-stamp:
-	if $(SWIG) $(STD_SWIG_PYTHON_ARGS) $(howto_swig_args) \
-		-MD -MF $(DEPDIR)/howto.Std \
-		-module howto_swig -o howto_swig.cc $(WHAT); then \
+$(DEPDIR)/ieee-generate-stamp:
+	if $(SWIG) $(STD_SWIG_PYTHON_ARGS) $(ieee_swig_args) \
+		-MD -MF $(DEPDIR)/ieee.Std \
+		-module ieee_swig -o ieee_swig.cc $(WHAT); then \
 	    if test $(host_os) = mingw32; then \
-		$(RM) $(DEPDIR)/howto.Sd; \
-		$(SED) 's,\\\\,/,g' < $(DEPDIR)/howto.Std \
-			> $(DEPDIR)/howto.Sd; \
-		$(RM) $(DEPDIR)/howto.Std; \
-		$(MV) $(DEPDIR)/howto.Sd $(DEPDIR)/howto.Std; \
+		$(RM) $(DEPDIR)/ieee.Sd; \
+		$(SED) 's,\\\\,/,g' < $(DEPDIR)/ieee.Std \
+			> $(DEPDIR)/ieee.Sd; \
+		$(RM) $(DEPDIR)/ieee.Std; \
+		$(MV) $(DEPDIR)/ieee.Sd $(DEPDIR)/ieee.Std; \
 	    fi; \
 	else \
-	    $(RM) $(DEPDIR)/howto.S*; exit 1; \
+	    $(RM) $(DEPDIR)/ieee.S*; exit 1; \
 	fi;
-	$(RM) $(DEPDIR)/howto.d
-	cp $(DEPDIR)/howto.Std $(DEPDIR)/howto.d
-	echo "" >> $(DEPDIR)/howto.d
+	$(RM) $(DEPDIR)/ieee.d
+	cp $(DEPDIR)/ieee.Std $(DEPDIR)/ieee.d
+	echo "" >> $(DEPDIR)/ieee.d
 	$(SED) -e '1d;s, \\,,g;s, ,,g' < $(DEPDIR)/ieee.Std | \
 		awk '{ printf "%s:\n\n", $$0 }' >> $(DEPDIR)/ieee.d
 	$(RM) $(DEPDIR)/ieee.Std

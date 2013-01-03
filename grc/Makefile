@@ -140,13 +140,13 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(grcblocksdir)"
 DATA = $(dist_grcblocks_DATA)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCAS = gcc
@@ -179,7 +179,7 @@ EGREP = /bin/grep -E
 EXEEXT = 
 FGREP = /bin/grep -F
 GIT = /usr/bin/git
-GIT_COMMIT = 19a18cbe
+GIT_COMMIT = c497cc94
 GIT_DESCRIBE = 
 GIT_SEQNO = 
 GIT_TAG = 
@@ -202,7 +202,7 @@ LIBVER = 3.3.0
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -241,10 +241,10 @@ SWIG_PYTHON_LIB = -lswigpy
 SWIG_PYTHON_OPT = -python
 VERSION = 3.3.0
 XMLTO = 
-abs_builddir = /home/zitouni/git/workspace/ieee_802-15-4_868-900/grc
-abs_srcdir = /home/zitouni/git/workspace/ieee_802-15-4_868-900/grc
-abs_top_builddir = /home/zitouni/git/workspace/ieee_802-15-4_868-900
-abs_top_srcdir = /home/zitouni/git/workspace/ieee_802-15-4_868-900
+abs_builddir = /home/zitouni/git/ieee_802-15-4_868-900/grc
+abs_srcdir = /home/zitouni/git/ieee_802-15-4_868-900/grc
+abs_top_builddir = /home/zitouni/git/ieee_802-15-4_868-900
+abs_top_srcdir = /home/zitouni/git/ieee_802-15-4_868-900
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -276,7 +276,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/install-sh
+install_sh = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/install-sh
 lf_CFLAGS =  -Wall -Werror-implicit-function-declaration
 lf_CXXFLAGS =  -Wall -Woverloaded-virtual
 libdir = ${exec_prefix}/lib64
@@ -338,7 +338,7 @@ STD_DEFINES_AND_INCLUDES = \
 modincludedir = $(includedir)/$(modname)
 
 # swig includes 
-swigincludedir = $(modincludedir)/swig
+swigincludedir = $(modincludedir)/swig -I/$(includedir)/gruel/swig
 
 # Install this stuff in the appropriate subdirectory
 # This usually ends up at:
@@ -360,8 +360,7 @@ MOSTLYCLEANFILES = $(BUILT_SOURCES) $(STAMPS) *.pyc *.pyo *~ *.tmp *.loT
 grcblocksdir = $(grc_blocksdir)
 dist_grcblocks_DATA = \
 	ieee_symbols_to_chips_bs.xml \
-	ieee_ieee802_15_4_packet_sink.xml \
-	howto_square2_ff.xml
+	ieee_ieee802_15_4_packet_sink.xml 
 
 all: all-am
 

@@ -25,43 +25,39 @@ include $(top_srcdir)/Makefile.common
 TESTS = test_all
 
 # ----------------------------------------------------------------
-# ieee C++ library: libgnuradio-howto.so
+# ieee C++ library: libgnuradio-ieee.so
 # ----------------------------------------------------------------
 
 # C/C++ headers get installed in ${prefix}/include/$(modname)
 modinclude_HEADERS = \
 	ieee_symbols_to_chips_bs.h \
-	ieee_ieee802_15_4_packet_sink.h\
-	howto_square2_ff.h
+	ieee_ieee802_15_4_packet_sink.h 
 
-lib_LTLIBRARIES = libgnuradio-howto.la
+lib_LTLIBRARIES = libgnuradio-ieee.la
 
-libgnuradio_howto_la_SOURCES = \
+libgnuradio_ieee_la_SOURCES = \
 	ieee_symbols_to_chips_bs.cc \
-	ieee_ieee802_15_4_packet_sink.cc \
-	howto_square2_ff.cc
+	ieee_ieee802_15_4_packet_sink.cc 
 
-libgnuradio_howto_la_LIBADD = \
+libgnuradio_ieee_la_LIBADD = \
 	$(GNURADIO_CORE_LA)
 
-libgnuradio_howto_la_LDFLAGS = $(NO_UNDEFINED) $(LTVERSIONFLAGS)
+libgnuradio_ieee_la_LDFLAGS = $(NO_UNDEFINED) $(LTVERSIONFLAGS)
 
 # ----------------------------------------------------------------
-# howto C++ QA library: libgnuradio-howto-qa.so (not installed)
+# ieee C++ QA library: libgnuradio-ieee-qa.so (not installed)
 # ----------------------------------------------------------------
 
-noinst_LTLIBRARIES = libgnuradio-howto-qa.la
+noinst_LTLIBRARIES = libgnuradio-ieee-qa.la
 
-libgnuradio_howto_qa_la_SOURCES = \
+libgnuradio_ieee_qa_la_SOURCES = \
 	qa_ieee.cc \
-	qa_howto_square_ff.cc \
-	ieee_ieee802_15_4_packet_sink.cc \
-	qa_howto_square2_ff.cc
+	qa_ieee_ieee802_15_4_packet_sink.cc
 
-libgnuradio_howto_qa_la_LDFLAGS = $(NO_UNDEFINED) -version-info 0:0:0
+libgnuradio_ieee_qa_la_LDFLAGS = $(NO_UNDEFINED) -version-info 0:0:0
 
-libgnuradio_howto_qa_la_LIBADD = \
-	libgnuradio-howto.la \
+libgnuradio_ieee_qa_la_LIBADD = \
+	libgnuradio-ieee.la \
 	$(CPPUNIT_LIBS)
 
 # ----------------------------------------------------------------
@@ -69,9 +65,7 @@ libgnuradio_howto_qa_la_LIBADD = \
 # ----------------------------------------------------------------
 noinst_HEADERS = \
 	qa_ieee.h \
-	qa_howto_square_ff.h \
-	ieee_ieee802_15_4_packet_sink.h \
-	qa_howto_square2_ff.h
+	qa_ieee_ieee802_15_4_packet_sink.h 
 
 # ----------------------------------------------------------------
 # test program
@@ -80,4 +74,4 @@ noinst_PROGRAMS = \
 	test_all
 
 test_all_SOURCES = test_all.cc
-test_all_LDADD   = libgnuradio-howto-qa.la
+test_all_LDADD   = libgnuradio-ieee-qa.la

@@ -18,15 +18,15 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-#ifndef INCLUDED_QA_HOWTO_SQUARE_FF_H
-#define INCLUDED_QA_HOWTO_SQUARE_FF_H
+#ifndef INCLUDED_QA_IEEE_IEEE802_15_4_PACKET_SINK_H
+#define INCLUDED_QA_IEEE_IEEE802_15_4_PACKET_SINK_H
 
 #include <cppunit/extensions/HelperMacros.h>
 #include <cppunit/TestCase.h>
 
-class qa_howto_square_ff : public CppUnit::TestCase {
+class qa_ieee_ieee_802_15_4_packet_sink : public CppUnit::TestCase {
 
-  CPPUNIT_TEST_SUITE (qa_howto_square_ff);
+  CPPUNIT_TEST_SUITE (qa_ieee_ieee_802_15_4_packet_sink);
   CPPUNIT_TEST (t1);
   CPPUNIT_TEST (t2);
   CPPUNIT_TEST_SUITE_END ();

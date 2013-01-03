@@ -143,27 +143,25 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(modincludedir)"
 LTLIBRARIES = $(lib_LTLIBRARIES) $(noinst_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-libgnuradio_howto_qa_la_DEPENDENCIES = libgnuradio-howto.la \
+libgnuradio_ieee_qa_la_DEPENDENCIES = libgnuradio-ieee.la \
 	$(am__DEPENDENCIES_1)
-am_libgnuradio_howto_qa_la_OBJECTS = qa_ieee.lo qa_howto_square_ff.lo \
-	ieee_ieee802_15_4_packet_sink.lo qa_howto_square2_ff.lo
-libgnuradio_howto_qa_la_OBJECTS =  \
-	$(am_libgnuradio_howto_qa_la_OBJECTS)
-libgnuradio_howto_qa_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
+am_libgnuradio_ieee_qa_la_OBJECTS = qa_ieee.lo \
+	qa_ieee_ieee802_15_4_packet_sink.lo
+libgnuradio_ieee_qa_la_OBJECTS = $(am_libgnuradio_ieee_qa_la_OBJECTS)
+libgnuradio_ieee_qa_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(libgnuradio_howto_qa_la_LDFLAGS) $(LDFLAGS) -o \
-	$@
-libgnuradio_howto_la_DEPENDENCIES =
-am_libgnuradio_howto_la_OBJECTS = ieee_symbols_to_chips_bs.lo \
-	ieee_ieee802_15_4_packet_sink.lo howto_square2_ff.lo
-libgnuradio_howto_la_OBJECTS = $(am_libgnuradio_howto_la_OBJECTS)
-libgnuradio_howto_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(CXXFLAGS) $(libgnuradio_ieee_qa_la_LDFLAGS) $(LDFLAGS) -o $@
+libgnuradio_ieee_la_DEPENDENCIES =
+am_libgnuradio_ieee_la_OBJECTS = ieee_symbols_to_chips_bs.lo \
+	ieee_ieee802_15_4_packet_sink.lo
+libgnuradio_ieee_la_OBJECTS = $(am_libgnuradio_ieee_la_OBJECTS)
+libgnuradio_ieee_la_LINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(libgnuradio_howto_la_LDFLAGS) $(LDFLAGS) -o $@
+	$(CXXFLAGS) $(libgnuradio_ieee_la_LDFLAGS) $(LDFLAGS) -o $@
 PROGRAMS = $(noinst_PROGRAMS)
 am_test_all_OBJECTS = test_all.$(OBJEXT)
 test_all_OBJECTS = $(am_test_all_OBJECTS)
-test_all_DEPENDENCIES = libgnuradio-howto-qa.la
+test_all_DEPENDENCIES = libgnuradio-ieee-qa.la
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -177,23 +175,23 @@ CXXLD = $(CXX)
 CXXLINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(libgnuradio_howto_qa_la_SOURCES) \
-	$(libgnuradio_howto_la_SOURCES) $(test_all_SOURCES)
-DIST_SOURCES = $(libgnuradio_howto_qa_la_SOURCES) \
-	$(libgnuradio_howto_la_SOURCES) $(test_all_SOURCES)
+SOURCES = $(libgnuradio_ieee_qa_la_SOURCES) \
+	$(libgnuradio_ieee_la_SOURCES) $(test_all_SOURCES)
+DIST_SOURCES = $(libgnuradio_ieee_qa_la_SOURCES) \
+	$(libgnuradio_ieee_la_SOURCES) $(test_all_SOURCES)
 HEADERS = $(modinclude_HEADERS) $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 am__tty_colors = \
 red=; grn=; lgn=; blu=; std=
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCAS = gcc
@@ -226,7 +224,7 @@ EGREP = /bin/grep -E
 EXEEXT = 
 FGREP = /bin/grep -F
 GIT = /usr/bin/git
-GIT_COMMIT = 19a18cbe
+GIT_COMMIT = c497cc94
 GIT_DESCRIBE = 
 GIT_SEQNO = 
 GIT_TAG = 
@@ -249,7 +247,7 @@ LIBVER = 3.3.0
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -288,10 +286,10 @@ SWIG_PYTHON_LIB = -lswigpy
 SWIG_PYTHON_OPT = -python
 VERSION = 3.3.0
 XMLTO = 
-abs_builddir = /home/zitouni/git/workspace/ieee_802-15-4_868-900/lib
-abs_srcdir = /home/zitouni/git/workspace/ieee_802-15-4_868-900/lib
-abs_top_builddir = /home/zitouni/git/workspace/ieee_802-15-4_868-900
-abs_top_srcdir = /home/zitouni/git/workspace/ieee_802-15-4_868-900
+abs_builddir = /home/zitouni/git/ieee_802-15-4_868-900/lib
+abs_srcdir = /home/zitouni/git/ieee_802-15-4_868-900/lib
+abs_top_builddir = /home/zitouni/git/ieee_802-15-4_868-900
+abs_top_srcdir = /home/zitouni/git/ieee_802-15-4_868-900
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -323,7 +321,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/zitouni/git/workspace/ieee_802-15-4_868-900/install-sh
+install_sh = ${SHELL} /home/zitouni/git/ieee_802-15-4_868-900/install-sh
 lf_CFLAGS =  -Wall -Werror-implicit-function-declaration
 lf_CXXFLAGS =  -Wall -Woverloaded-virtual
 libdir = ${exec_prefix}/lib64
@@ -385,7 +383,7 @@ STD_DEFINES_AND_INCLUDES = \
 modincludedir = $(includedir)/$(modname)
 
 # swig includes 
-swigincludedir = $(modincludedir)/swig
+swigincludedir = $(modincludedir)/swig -I/$(includedir)/gruel/swig
 
 # Install this stuff in the appropriate subdirectory
 # This usually ends up at:
@@ -406,39 +404,35 @@ STAMPS =
 MOSTLYCLEANFILES = $(BUILT_SOURCES) $(STAMPS) *.pyc *.pyo *~ *.tmp *.loT
 
 # ----------------------------------------------------------------
-# ieee C++ library: libgnuradio-howto.so
+# ieee C++ library: libgnuradio-ieee.so
 # ----------------------------------------------------------------
 
 # C/C++ headers get installed in ${prefix}/include/$(modname)
 modinclude_HEADERS = \
 	ieee_symbols_to_chips_bs.h \
-	ieee_ieee802_15_4_packet_sink.h\
-	howto_square2_ff.h
+	ieee_ieee802_15_4_packet_sink.h 
 
-lib_LTLIBRARIES = libgnuradio-howto.la
-libgnuradio_howto_la_SOURCES = \
+lib_LTLIBRARIES = libgnuradio-ieee.la
+libgnuradio_ieee_la_SOURCES = \
 	ieee_symbols_to_chips_bs.cc \
-	ieee_ieee802_15_4_packet_sink.cc \
-	howto_square2_ff.cc
+	ieee_ieee802_15_4_packet_sink.cc 
 
-libgnuradio_howto_la_LIBADD = \
+libgnuradio_ieee_la_LIBADD = \
 	$(GNURADIO_CORE_LA)
 
-libgnuradio_howto_la_LDFLAGS = $(NO_UNDEFINED) $(LTVERSIONFLAGS)
+libgnuradio_ieee_la_LDFLAGS = $(NO_UNDEFINED) $(LTVERSIONFLAGS)
 
 # ----------------------------------------------------------------
-# howto C++ QA library: libgnuradio-howto-qa.so (not installed)
+# ieee C++ QA library: libgnuradio-ieee-qa.so (not installed)
 # ----------------------------------------------------------------
-noinst_LTLIBRARIES = libgnuradio-howto-qa.la
-libgnuradio_howto_qa_la_SOURCES = \
+noinst_LTLIBRARIES = libgnuradio-ieee-qa.la
+libgnuradio_ieee_qa_la_SOURCES = \
 	qa_ieee.cc \
-	qa_howto_square_ff.cc \
-	ieee_ieee802_15_4_packet_sink.cc \
-	qa_howto_square2_ff.cc
+	qa_ieee_ieee802_15_4_packet_sink.cc
 
-libgnuradio_howto_qa_la_LDFLAGS = $(NO_UNDEFINED) -version-info 0:0:0
-libgnuradio_howto_qa_la_LIBADD = \
-	libgnuradio-howto.la \
+libgnuradio_ieee_qa_la_LDFLAGS = $(NO_UNDEFINED) -version-info 0:0:0
+libgnuradio_ieee_qa_la_LIBADD = \
+	libgnuradio-ieee.la \
 	$(CPPUNIT_LIBS)
 
 
@@ -447,12 +441,10 @@ libgnuradio_howto_qa_la_LIBADD = \
 # ----------------------------------------------------------------
 noinst_HEADERS = \
 	qa_ieee.h \
-	qa_howto_square_ff.h \
-	ieee_ieee802_15_4_packet_sink.h \
-	qa_howto_square2_ff.h
+	qa_ieee_ieee802_15_4_packet_sink.h 
 
 test_all_SOURCES = test_all.cc
-test_all_LDADD = libgnuradio-howto-qa.la
+test_all_LDADD = libgnuradio-ieee-qa.la
 all: all-am
 
 .SUFFIXES:
@@ -528,10 +520,10 @@ clean-noinstLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-libgnuradio-howto-qa.la: $(libgnuradio_howto_qa_la_OBJECTS) $(libgnuradio_howto_qa_la_DEPENDENCIES) $(EXTRA_libgnuradio_howto_qa_la_DEPENDENCIES) 
-	$(libgnuradio_howto_qa_la_LINK)  $(libgnuradio_howto_qa_la_OBJECTS) $(libgnuradio_howto_qa_la_LIBADD) $(LIBS)
-libgnuradio-howto.la: $(libgnuradio_howto_la_OBJECTS) $(libgnuradio_howto_la_DEPENDENCIES) $(EXTRA_libgnuradio_howto_la_DEPENDENCIES) 
-	$(libgnuradio_howto_la_LINK) -rpath $(libdir) $(libgnuradio_howto_la_OBJECTS) $(libgnuradio_howto_la_LIBADD) $(LIBS)
+libgnuradio-ieee-qa.la: $(libgnuradio_ieee_qa_la_OBJECTS) $(libgnuradio_ieee_qa_la_DEPENDENCIES) $(EXTRA_libgnuradio_ieee_qa_la_DEPENDENCIES) 
+	$(libgnuradio_ieee_qa_la_LINK)  $(libgnuradio_ieee_qa_la_OBJECTS) $(libgnuradio_ieee_qa_la_LIBADD) $(LIBS)
+libgnuradio-ieee.la: $(libgnuradio_ieee_la_OBJECTS) $(libgnuradio_ieee_la_DEPENDENCIES) $(EXTRA_libgnuradio_ieee_la_DEPENDENCIES) 
+	$(libgnuradio_ieee_la_LINK) -rpath $(libdir) $(libgnuradio_ieee_la_OBJECTS) $(libgnuradio_ieee_la_LIBADD) $(LIBS)
 
 clean-noinstPROGRAMS:
 	@list='$(noinst_PROGRAMS)'; test -n "$$list" || exit 0; \
@@ -551,12 +543,10 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/howto_square2_ff.Plo
 include ./$(DEPDIR)/ieee_ieee802_15_4_packet_sink.Plo
 include ./$(DEPDIR)/ieee_symbols_to_chips_bs.Plo
-include ./$(DEPDIR)/qa_howto_square2_ff.Plo
-include ./$(DEPDIR)/qa_howto_square_ff.Plo
 include ./$(DEPDIR)/qa_ieee.Plo
+include ./$(DEPDIR)/qa_ieee_ieee802_15_4_packet_sink.Plo
 include ./$(DEPDIR)/test_all.Po
 
 .cc.o:

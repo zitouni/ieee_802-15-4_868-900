@@ -19,17 +19,17 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include <qa_howto_square_ff.h>
+#include <qa_ieee_ieee802_15_4_packet_sink.h>
 #include <cppunit/TestAssert.h>
 
 void
-qa_howto_square_ff::t1()
+qa_ieee_ieee_802_15_4_packet_sink::t1()
 {
   // Insert CPPUNIT tests/asserts here
 }
 
 void
-qa_howto_square_ff::t2()
+qa_ieee_ieee_802_15_4_packet_sink::t2()
 {
   // Insert CPPUNIT tests/asserts here
 }

@@ -35,8 +35,8 @@ TOP_SWIG_IFILES = \
 # This ends up at:
 #   ${prefix}/lib/python${python_version}/site-packages/$(modname)
 
-howto_la_swig_libadd =		\
-	$(top_builddir)/lib/libgnuradio-howto.la
+ieee_la_swig_libadd =		\
+	$(top_builddir)/lib/libgnuradio-ieee.la
 
 include $(top_srcdir)/Makefile.swig
 
@@ -47,9 +47,8 @@ BUILT_SOURCES = $(swig_built_sources)
 no_dist_files = $(swig_built_sources)
 
 # additional SWIG files to be installed
-howto_swiginclude_headers = \
+ieee_swiginclude_headers = \
 	ieee_symbols_to_chips_bs.i \
-	ieee_ieee802_15_4_packet_sink.i \
-	howto_square2_ff.i
+	ieee_ieee802_15_4_packet_sink.i 
 
 endif

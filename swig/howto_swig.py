@@ -201,6 +201,44 @@ class ieee_symbols_to_chips_bs_sptr(object):
         """nitems_written(self, unsigned int which_output) -> uint64_t"""
         return _howto_swig.ieee_symbols_to_chips_bs_sptr_nitems_written(self, *args, **kwargs)
 
+    def max_noutput_items(self):
+        """max_noutput_items(self) -> int"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_max_noutput_items(self)
+
+    def set_max_noutput_items(self, *args, **kwargs):
+        """set_max_noutput_items(self, int m)"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_set_max_noutput_items(self, *args, **kwargs)
+
+    def unset_max_noutput_items(self):
+        """unset_max_noutput_items(self)"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_unset_max_noutput_items(self)
+
+    def is_set_max_noutput_items(self):
+        """is_set_max_noutput_items(self) -> bool"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_is_set_max_noutput_items(self)
+
+    def max_output_buffer(self, *args, **kwargs):
+        """max_output_buffer(self, int i) -> long"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_max_output_buffer(self, *args, **kwargs)
+
+    def set_max_output_buffer(self, *args):
+        """
+        set_max_output_buffer(self, long max_output_buffer)
+        set_max_output_buffer(self, int port, long max_output_buffer)
+        """
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_set_max_output_buffer(self, *args)
+
+    def min_output_buffer(self, *args, **kwargs):
+        """min_output_buffer(self, int i) -> long"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_min_output_buffer(self, *args, **kwargs)
+
+    def set_min_output_buffer(self, *args):
+        """
+        set_min_output_buffer(self, long min_output_buffer)
+        set_min_output_buffer(self, int port, long min_output_buffer)
+        """
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_set_min_output_buffer(self, *args)
+
     def detail(self):
         """detail(self) -> gr_block_detail_sptr"""
         return _howto_swig.ieee_symbols_to_chips_bs_sptr_detail(self)
@@ -212,6 +250,10 @@ class ieee_symbols_to_chips_bs_sptr(object):
     def name(self):
         """name(self) -> string"""
         return _howto_swig.ieee_symbols_to_chips_bs_sptr_name(self)
+
+    def symbol_name(self):
+        """symbol_name(self) -> string"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_symbol_name(self)
 
     def input_signature(self):
         """input_signature(self) -> gr_io_signature_sptr"""
@@ -232,6 +274,26 @@ class ieee_symbols_to_chips_bs_sptr(object):
     def check_topology(self, *args, **kwargs):
         """check_topology(self, int ninputs, int noutputs) -> bool"""
         return _howto_swig.ieee_symbols_to_chips_bs_sptr_check_topology(self, *args, **kwargs)
+
+    def alias(self):
+        """alias(self) -> string"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_alias(self)
+
+    def set_block_alias(self, *args, **kwargs):
+        """set_block_alias(self, string name)"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_set_block_alias(self, *args, **kwargs)
+
+    def _post(self, *args, **kwargs):
+        """_post(self, pmt_t which_port, pmt_t msg)"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr__post(self, *args, **kwargs)
+
+    def message_ports_in(self):
+        """message_ports_in(self) -> pmt_t"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_message_ports_in(self)
+
+    def message_ports_out(self):
+        """message_ports_out(self) -> pmt_t"""
+        return _howto_swig.ieee_symbols_to_chips_bs_sptr_message_ports_out(self)
 
 ieee_symbols_to_chips_bs_sptr_swigregister = _howto_swig.ieee_symbols_to_chips_bs_sptr_swigregister
 ieee_symbols_to_chips_bs_sptr_swigregister(ieee_symbols_to_chips_bs_sptr)
@@ -288,6 +350,44 @@ class howto_square2_ff_sptr(object):
         """nitems_written(self, unsigned int which_output) -> uint64_t"""
         return _howto_swig.howto_square2_ff_sptr_nitems_written(self, *args, **kwargs)
 
+    def max_noutput_items(self):
+        """max_noutput_items(self) -> int"""
+        return _howto_swig.howto_square2_ff_sptr_max_noutput_items(self)
+
+    def set_max_noutput_items(self, *args, **kwargs):
+        """set_max_noutput_items(self, int m)"""
+        return _howto_swig.howto_square2_ff_sptr_set_max_noutput_items(self, *args, **kwargs)
+
+    def unset_max_noutput_items(self):
+        """unset_max_noutput_items(self)"""
+        return _howto_swig.howto_square2_ff_sptr_unset_max_noutput_items(self)
+
+    def is_set_max_noutput_items(self):
+        """is_set_max_noutput_items(self) -> bool"""
+        return _howto_swig.howto_square2_ff_sptr_is_set_max_noutput_items(self)
+
+    def max_output_buffer(self, *args, **kwargs):
+        """max_output_buffer(self, int i) -> long"""
+        return _howto_swig.howto_square2_ff_sptr_max_output_buffer(self, *args, **kwargs)
+
+    def set_max_output_buffer(self, *args):
+        """
+        set_max_output_buffer(self, long max_output_buffer)
+        set_max_output_buffer(self, int port, long max_output_buffer)
+        """
+        return _howto_swig.howto_square2_ff_sptr_set_max_output_buffer(self, *args)
+
+    def min_output_buffer(self, *args, **kwargs):
+        """min_output_buffer(self, int i) -> long"""
+        return _howto_swig.howto_square2_ff_sptr_min_output_buffer(self, *args, **kwargs)
+
+    def set_min_output_buffer(self, *args):
+        """
+        set_min_output_buffer(self, long min_output_buffer)
+        set_min_output_buffer(self, int port, long min_output_buffer)
+        """
+        return _howto_swig.howto_square2_ff_sptr_set_min_output_buffer(self, *args)
+
     def detail(self):
         """detail(self) -> gr_block_detail_sptr"""
         return _howto_swig.howto_square2_ff_sptr_detail(self)
@@ -299,6 +399,10 @@ class howto_square2_ff_sptr(object):
     def name(self):
         """name(self) -> string"""
         return _howto_swig.howto_square2_ff_sptr_name(self)
+
+    def symbol_name(self):
+        """symbol_name(self) -> string"""
+        return _howto_swig.howto_square2_ff_sptr_symbol_name(self)
 
     def input_signature(self):
         """input_signature(self) -> gr_io_signature_sptr"""
@@ -319,6 +423,26 @@ class howto_square2_ff_sptr(object):
     def check_topology(self, *args, **kwargs):
         """check_topology(self, int ninputs, int noutputs) -> bool"""
         return _howto_swig.howto_square2_ff_sptr_check_topology(self, *args, **kwargs)
+
+    def alias(self):
+        """alias(self) -> string"""
+        return _howto_swig.howto_square2_ff_sptr_alias(self)
+
+    def set_block_alias(self, *args, **kwargs):
+        """set_block_alias(self, string name)"""
+        return _howto_swig.howto_square2_ff_sptr_set_block_alias(self, *args, **kwargs)
+
+    def _post(self, *args, **kwargs):
+        """_post(self, pmt_t which_port, pmt_t msg)"""
+        return _howto_swig.howto_square2_ff_sptr__post(self, *args, **kwargs)
+
+    def message_ports_in(self):
+        """message_ports_in(self) -> pmt_t"""
+        return _howto_swig.howto_square2_ff_sptr_message_ports_in(self)
+
+    def message_ports_out(self):
+        """message_ports_out(self) -> pmt_t"""
+        return _howto_swig.howto_square2_ff_sptr_message_ports_out(self)
 
 howto_square2_ff_sptr_swigregister = _howto_swig.howto_square2_ff_sptr_swigregister
 howto_square2_ff_sptr_swigregister(howto_square2_ff_sptr)
@@ -375,6 +499,44 @@ class ieee_ieee802_15_4_packet_sink_sptr(object):
         """nitems_written(self, unsigned int which_output) -> uint64_t"""
         return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_nitems_written(self, *args, **kwargs)
 
+    def max_noutput_items(self):
+        """max_noutput_items(self) -> int"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_max_noutput_items(self)
+
+    def set_max_noutput_items(self, *args, **kwargs):
+        """set_max_noutput_items(self, int m)"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_set_max_noutput_items(self, *args, **kwargs)
+
+    def unset_max_noutput_items(self):
+        """unset_max_noutput_items(self)"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_unset_max_noutput_items(self)
+
+    def is_set_max_noutput_items(self):
+        """is_set_max_noutput_items(self) -> bool"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_is_set_max_noutput_items(self)
+
+    def max_output_buffer(self, *args, **kwargs):
+        """max_output_buffer(self, int i) -> long"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_max_output_buffer(self, *args, **kwargs)
+
+    def set_max_output_buffer(self, *args):
+        """
+        set_max_output_buffer(self, long max_output_buffer)
+        set_max_output_buffer(self, int port, long max_output_buffer)
+        """
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_set_max_output_buffer(self, *args)
+
+    def min_output_buffer(self, *args, **kwargs):
+        """min_output_buffer(self, int i) -> long"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_min_output_buffer(self, *args, **kwargs)
+
+    def set_min_output_buffer(self, *args):
+        """
+        set_min_output_buffer(self, long min_output_buffer)
+        set_min_output_buffer(self, int port, long min_output_buffer)
+        """
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_set_min_output_buffer(self, *args)
+
     def detail(self):
         """detail(self) -> gr_block_detail_sptr"""
         return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_detail(self)
@@ -386,6 +548,10 @@ class ieee_ieee802_15_4_packet_sink_sptr(object):
     def name(self):
         """name(self) -> string"""
         return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_name(self)
+
+    def symbol_name(self):
+        """symbol_name(self) -> string"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_symbol_name(self)
 
     def input_signature(self):
         """input_signature(self) -> gr_io_signature_sptr"""
@@ -406,6 +572,26 @@ class ieee_ieee802_15_4_packet_sink_sptr(object):
     def check_topology(self, *args, **kwargs):
         """check_topology(self, int ninputs, int noutputs) -> bool"""
         return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_check_topology(self, *args, **kwargs)
+
+    def alias(self):
+        """alias(self) -> string"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_alias(self)
+
+    def set_block_alias(self, *args, **kwargs):
+        """set_block_alias(self, string name)"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_set_block_alias(self, *args, **kwargs)
+
+    def _post(self, *args, **kwargs):
+        """_post(self, pmt_t which_port, pmt_t msg)"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr__post(self, *args, **kwargs)
+
+    def message_ports_in(self):
+        """message_ports_in(self) -> pmt_t"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_message_ports_in(self)
+
+    def message_ports_out(self):
+        """message_ports_out(self) -> pmt_t"""
+        return _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_message_ports_out(self)
 
 ieee_ieee802_15_4_packet_sink_sptr_swigregister = _howto_swig.ieee_ieee802_15_4_packet_sink_sptr_swigregister
 ieee_ieee802_15_4_packet_sink_sptr_swigregister(ieee_ieee802_15_4_packet_sink_sptr)

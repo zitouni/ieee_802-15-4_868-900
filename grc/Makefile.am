@@ -25,5 +25,5 @@ grcblocksdir = $(grc_blocksdir)
 
 dist_grcblocks_DATA = \
 	ieee_symbols_to_chips_bs.xml \
-	ieee_ieee802_15_4_packet_sink.xml \
-	howto_square2_ff.xml
+	ieee_ieee802_15_4_packet_sink.xml 
+

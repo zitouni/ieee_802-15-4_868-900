@@ -24,13 +24,13 @@ include $(top_srcdir)/Makefile.common
 EXTRA_DIST = run_tests.in
 
 
-TESTS = 				\
-	run_tests
+TESTS =	run_tests
 
 uclapythondir = $(grpythondir)/ucla_blks
 
+modpython_PYTHON = \
+	__init__.py
 uclapython_PYTHON =                     \
-	__init__.py                     \
 	cc1k.py                         \
 	cc1k_sos_pkt.py                 \
 	ieee802_15_4.py			\
@@ -41,4 +41,3 @@ uclapython_PYTHON =                     \
 noinst_PYTHON = 			\
 	qa_ucla.py			
 
-CLEANFILES = *.pyc *.pyo

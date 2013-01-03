@@ -308,7 +308,7 @@ STD_DEFINES_AND_INCLUDES = \
 modincludedir = $(includedir)/$(modname)
 
 # swig includes 
-swigincludedir = $(modincludedir)/swig
+swigincludedir = $(modincludedir)/swig -I/$(includedir)/gruel/swig
 
 # Install this stuff in the appropriate subdirectory
 # This usually ends up at:

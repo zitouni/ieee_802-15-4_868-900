@@ -338,7 +338,7 @@ STD_DEFINES_AND_INCLUDES = \
 modincludedir = $(includedir)/$(modname)
 
 # swig includes 
-swigincludedir = $(modincludedir)/swig
+swigincludedir = $(modincludedir)/swig -I/$(includedir)/gruel/swig
 
 # Install this stuff in the appropriate subdirectory
 # This usually ends up at:
@@ -360,8 +360,7 @@ MOSTLYCLEANFILES = $(BUILT_SOURCES) $(STAMPS) *.pyc *.pyo *~ *.tmp *.loT
 grcblocksdir = $(grc_blocksdir)
 dist_grcblocks_DATA = \
 	ieee_symbols_to_chips_bs.xml \
-	ieee_ieee802_15_4_packet_sink.xml \
-	howto_square2_ff.xml
+	ieee_ieee802_15_4_packet_sink.xml 
 
 all: all-am
 

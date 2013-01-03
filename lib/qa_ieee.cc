@@ -26,16 +26,15 @@
  */
 
 #include <qa_ieee.h>
-#include <qa_howto_square_ff.h>
-#include <qa_howto_square2_ff.h>
+#include <qa_ieee_ieee802_15_4_packet_sink.h>
+
 
 CppUnit::TestSuite *
 qa_ieee::suite()
 {
   CppUnit::TestSuite *s = new CppUnit::TestSuite("ieee");
 
-  s->addTest(qa_howto_square_ff::suite());
-  s->addTest(qa_howto_square2_ff::suite());
+  s->addTest(qa_ieee_ieee_802_15_4_packet_sink::suite());
 
   return s;
 }
